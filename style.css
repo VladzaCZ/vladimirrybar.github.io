@@ -1,0 +1,120 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: sans-serif;
+    line-height: 1.5;
+    color: #333;
+    background: url(https://tinyurl.com/ydwy44pz) no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Main Section */
+.main-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+/* Navigation Styling */
+nav {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+nav a {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: rgb(91, 90, 175);
+    cursor: pointer;
+}
+
+/* Section Content Styling */
+.projects-section,
+.about-web,
+.contact {
+    padding: 20px;
+    text-align: center;
+}
+
+.projects-section h2,
+.about-web h2,
+.contact h2 {
+    margin-bottom: 20px;
+    color: #48c1f1;
+}
+
+.project, .okno {
+    background-color: rgba(28, 110, 134, 0.7);
+    text-align: center;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin: 10px;
+    flex: 1 1 calc(30% - 20px); /* Default card size */
+}
+
+/* Container for Projects */
+.container {
+    max-width: 1200px;
+    margin: 0 auto ;
+    padding: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Adds consistent space between items */
+    justify-content: center;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 20px /* Reduce spacing for smaller screens */
+    }
+
+    .project, .okno {
+        flex: 1 1 100%; /* Full width on small screens */
+    }
+
+    nav a {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Center headings on mobile */
+    .main-section h1,
+    .projects-section h2,
+    .about-web h2,
+    .contact h2 {
+        text-align: center; /* Center heading text */
+    }
+}
+
+@media (min-width: 769px) {
+    .project {
+        flex: 1 1 calc(30% - 20px); /* Multi-column layout */
+    }
+}
+
+
+
